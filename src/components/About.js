@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 
 export default function About() {
     return (
@@ -25,22 +26,28 @@ export default function About() {
                     </p>
                     <div className="flex justify-center">
                         <a
-                            href="src/components/About#contact"
+                            href="#contact"
                             className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
                             Work With Me
                         </a>
-                        <Link href="/my-projects/my-portfolio/pages/projects">
+                        <Link href="/projects">
                             <a className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
                                 See My Past Work</a>
                         </Link>
                     </div>
                 </div>
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img
+                    <Image
                         className="object-cover object-center rounded"
                         alt="hero"
-                        src="./coding.svg"
+                        src="/coding.svg"
+                        width="100%"
+                        height="100%"
+                        layout="responsive"
+                        objectFit="contain"
+                        priority={2}
                     />
+
                 </div>
             </div>
         </section>
