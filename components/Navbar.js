@@ -1,7 +1,7 @@
 import {Fragment} from 'react'
 import {Disclosure, Menu, Transition} from '@headlessui/react'
 import {Bars3Icon, BellIcon, XMarkIcon} from '@heroicons/react/24/outline'
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 
 const isCurrent = (name, currentSection) => name === currentSection;
