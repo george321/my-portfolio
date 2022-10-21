@@ -1,7 +1,8 @@
-import {Fragment} from 'react'
+import React, {Fragment} from 'react'
 import {Disclosure, Menu, Transition} from '@headlessui/react'
 import {Bars3Icon, BellIcon, XMarkIcon} from '@heroicons/react/24/outline'
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 
 const isCurrent = (name, currentSection) => name === currentSection;
@@ -52,17 +53,20 @@ const NavBar = ({currentSection}) => {
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => (
-                                            <a
-                                                key={item.name}
-                                                href={item.href}
-                                                className={classNames(
-                                                    isCurrent(item.name, currentSection) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                    'px-3 py-2 rounded-md text-sm font-medium'
-                                                )}
-                                                aria-current={isCurrent(item.name, currentSection) ? 'page' : undefined}
-                                            >
-                                                {item.name}
-                                            </a>
+                                            <Link key={`link-${item.name}`} href={item.href}>
+                                                <a
+                                                    key={item.name}
+                                                    href={item.href}
+                                                    className={classNames(
+                                                        isCurrent(item.name, currentSection) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                        'px-3 py-2 rounded-md text-sm font-medium'
+                                                    )}
+                                                    aria-current={isCurrent(item.name, currentSection) ? 'page' : undefined}
+                                                >
+                                                    {item.name}
+                                                </a>
+                                            </Link>
+
                                         ))}
                                     </div>
                                 </div>
