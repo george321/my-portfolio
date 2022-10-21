@@ -1,4 +1,4 @@
-import { CodeBracketIcon } from "@heroicons/react/24/solid";
+import { CodeBracketIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { projects } from '../data/data';
 
