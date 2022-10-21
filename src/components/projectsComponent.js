@@ -1,6 +1,7 @@
+import React from 'react';
 import {CodeBracketIcon} from '@heroicons/react/24/solid';
 import Image from 'next/image';
-import React from 'react';
+
 import {projects} from '../../data/data';
 
 export default function ProjectsComponent() {

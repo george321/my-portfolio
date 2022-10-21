@@ -1,6 +1,30 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
+import emailjs from '@emailjs/browser';
+import {Button} from '@mui/material';
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
+
+
+const sendMail = (e, form, setSubmitted) => {
+
+    e.preventDefault();
+    emailjs.sendForm('service_bpyotpp', 'template_c27m4li', form.current, 'nTs9ETO6utTK0ev2R')
+        .then((result) => {
+            setSubmitted(false)
+        }, (error) => {
+            setSubmitted(false)
+        });
+}
 
 export default function ContactComponent() {
+    const form = useRef();
+    const [submitted, setSubmitted] = useState(false);
+
+    function handleSubmit(e) {
+        setSubmitted(true)
+        sendMail(e, form, setSubmitted);
+    }
+
     return (
         <section id="contact" className="relative">
             <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -39,8 +63,10 @@ export default function ContactComponent() {
                     </div>
                 </div>
                 <form
+                    onSubmit={handleSubmit}
                     data-netlify="true"
                     name="contact"
+                    ref={form}
                     className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
                     <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
                         Hire Me
@@ -55,8 +81,8 @@ export default function ContactComponent() {
                         </label>
                         <input
                             type="text"
-                            id="name"
-                            name="name"
+                            id="from_name"
+                            name="from_name"
                             className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                         />
                     </div>
@@ -66,8 +92,8 @@ export default function ContactComponent() {
                         </label>
                         <input
                             type="email"
-                            id="email"
-                            name="email"
+                            id="user_email"
+                            name="user_email"
                             className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                         />
                     </div>
@@ -83,11 +109,17 @@ export default function ContactComponent() {
                             className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                         />
                     </div>
-                    <button
-                        type="submit"
-                        className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                        Submit
-                    </button>
+                    {!submitted &&
+                        (<Button
+                            type="submit"
+                            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                            Submit
+                        </Button>)}
+                    {submitted && (<Box
+                        className="justify-center	 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                        sx={{display: 'flex'}}>
+                        <CircularProgress color="inherit"/>
+                    </Box>)}
                 </form>
             </div>
         </section>
