@@ -11,7 +11,7 @@ export default function ContactComponent() {
                         height="100%"
                         title="map"
                         className="absolute inset-0"
-                        style={{filter: "opacity(0.7)", border: "0px", margin: "0px"}}
+                        style={{filter: 'opacity(0.7)', border: '0px', margin: '0px'}}
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12569.187535754643!2d23.759917340248084!3d38.04016817505814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1989ea854b7f9%3A0xe5334ad2f5509523!2zzp3Orc6_IM6Xz4HOrM66zrvOtc65zr8sIM6Xz4HOrM66zrvOtc65zr8gMTQxIDIx!5e0!3m2!1sel!2sgr!4v1666261720891!5m2!1sel!2sgr"
                     />
                     <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
