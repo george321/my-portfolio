@@ -1,4 +1,4 @@
-import NavBar from '../components/navBar';
+import NavBar from '../components/NavBar';
 import ContactComponent from '../components/contactComponent';
 
 export default function Projects() {
