@@ -12,7 +12,7 @@ export default function ContactComponent() {
                         title="map"
                         className="absolute inset-0"
                         style={{filter: 'opacity(0.7)', border: '0px', margin: '0px'}}
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12569.187535754643!2d23.759917340248084!3d38.04016817505814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1989ea854b7f9%3A0xe5334ad2f5509523!2zzp3Orc6_IM6Xz4HOrM66zrvOtc65zr8sIM6Xz4HOrM66zrvOtc65zr8gMTQxIDIx!5e0!3m2!1sel!2sgr!4v1666261720891!5m2!1sel!2sgr"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d467.06478104346496!2d23.76599799980593!3d38.04650846917846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a199bfb022ce09%3A0x8f94a1fcefd4e795!2zzqDOu86xz4TOtc6vzrEgzpfPgc6xzrrOu861zq_Ov8-F!5e0!3m2!1sel!2sgr!4v1666349680480!5m2!1sel!2sgr"
                     />
                     <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
                         <div className="lg:w-1/2 px-6">
