@@ -17,7 +17,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-const NavBar = ({ currentSection }) => {
+const NavBar = ({currentSection}) => {
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({open}) => (
