@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function About() {
     return (
@@ -45,7 +45,7 @@ export default function About() {
                         height="100%"
                         layout="responsive"
                         objectFit="contain"
-                        priority={2}
+                        priority
                     />
 
                 </div>
