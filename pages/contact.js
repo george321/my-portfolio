@@ -1,5 +1,5 @@
-import NavBar from '../src/components/NavBar';
 import ContactComponent from '../src/components/contactComponent';
+import NavBar from '../src/components/NavBar';
 
 export default function Projects() {
     return (
