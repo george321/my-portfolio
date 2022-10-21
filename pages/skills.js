@@ -1,5 +1,5 @@
-import NavBar from "../components/navBar";
-import SkillsComponent from "../components/skillsComponent";
+import NavBar from '../components/navBar';
+import SkillsComponent from '../components/skillsComponent';
 
 export default function Projects() {
     return (
