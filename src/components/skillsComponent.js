@@ -1,6 +1,6 @@
 import { CheckBadgeIcon, CpuChipIcon } from '@heroicons/react/24/solid';
 import React from 'react';
-import { skills } from '../data/data';
+import { skills } from '../../data/data';
 
 export default function SkillsComponent() {
     return (
